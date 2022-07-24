@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    open-in-view: false
+    hibernate:
+      use-new-id-generator-mappings: false
+  datasource:
+    hikari:
+      master:
+        jdbc-url: jdbc:postgresql://localhost:5432/test
+        username: postgres
+        password: 1234
+      replica:
+        jdbc-url: jdbc:postgresql://localhost:5433/test
+        username: postgres
+        password: 1234
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
